@@ -1,0 +1,34 @@
+{
+  "name": "rocketchat-graylog-hook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "graylog-rocketchat.hooks.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/todvora/rocketchat-graylog-hook.git"
+  },
+  "keywords": [
+    "rocketchat",
+    "graylog"
+  ],
+  "author": "Tomas Dvorak <todvora@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/todvora/rocketchat-graylog-hook/issues"
+  },
+  "homepage": "https://github.com/todvora/rocketchat-graylog-hook#readme",
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "jest": "^21.2.1"
+  },
+  "dependencies": {
+    "require-from-string": "^2.0.1"
+  }
+}
