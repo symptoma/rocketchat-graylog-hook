@@ -14,6 +14,5 @@ const getRequest = (filename) => {
 
 test('Handles dummy alert', () => {
     const response = new Script().process_incoming_request(getRequest('dummy-alert.json'));
-    console.log(response);
     expect(response.content.text).toBe('Dummy alert to test notifications');
 });
