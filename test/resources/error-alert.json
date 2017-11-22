@@ -1,0 +1,90 @@
+{
+  "check_result": {
+    "result_description": "Stream received messages matching <level:\"3\"> (Current grace time: 10 minutes)",
+    "triggered_condition": {
+      "id": "5bfcddf4-202b-46d0-8721-18bbd0eeab3e",
+      "type": "field_content_value",
+      "created_at": "2017-11-21T11:42:25.258Z",
+      "creator_user_id": "admin",
+      "title": "Log level is error",
+      "parameters": {
+        "grace": 10,
+        "backlog": 10,
+        "repeat_notifications": false,
+        "field": "level",
+        "value": "3"
+      }
+    },
+    "triggered_at": "2017-11-22T05:43:37.867Z",
+    "triggered": true,
+    "matching_messages": [
+      {
+        "index": "graylog_7",
+        "message": "A global exception on URL http://www.example.com, headers: {Cookie=__cfduid=dd00f87ca1571f030cd86dc107ce0fbee1502342427; language=ro; JSESSIONID=example1rw0aif2vail73dck6kkzx1hk.example1; searches=1; gender=; birthyear=, CF",
+        "timestamp": "2017-11-22T05:42:46.398Z",
+        "fields": {
+          "file": "GlobalDefaultExceptionHandler.java",
+          "level": 3,
+          "full_message": "A global exception on URL http://www.example.com, headers: {Cookie=__cfduid=dd00f87ca1571f030cd86dc107ce0fbee1502342427; language=ro; JSESSIONID=example1rw0aif2vail73dck6kkzx1hk.example1; searches=1; gender=; birthyear=, CF-IPCountry=CZ, CF-RAY=3c1991399f3e0ab4-PRG, Accept=text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8, X-Forwarded-Proto=https, User-Agent=Mozilla/5.0 (X11; Linux x86_64; rv:57.0) Gecko/20100101 Firefox/57.0, X-Forwarded-Host=www.example.com, Connection=keep-alive, Host=www.example.com, CF-Visitor={\"scheme\":\"https\"}, Accept-Encoding=gzip, CF-Connecting-IP=176.12.115.196, upgrade-insecure-requests=1, X-Forwarded-For=176.12.115.196, 176.12.115.196, Accept-Language=en-US,en;q=0.5, X-Forwarded-Server=example.com}, occurred: null\n\n\rjava.lang.NullPointerException",
+          "line": 71,
+          "gl2_remote_ip": "127.0.0.172",
+          "logger": "root",
+          "gl2_remote_port": 41413,
+          "gl2_source_node": "f5170a3c-79d2-4349-a738-613f50fe2ae8",
+          "thread": "qtp1222167838-10076",
+          "gl2_source_input": "58bd29dbe64ada0001086c42",
+          "facility": "gelf-java",
+          "timestampMs": "1511329366398"
+        },
+        "id": "f7bc4d31-cf47-11e7-84b1-0242ac120004",
+        "source": "www.example.com",
+        "stream_ids": [
+          "000000000000000000000001",
+          "598ae2032ab79c000141ef2c"
+        ]
+      }
+    ]
+  },
+  "stream": {
+    "creator_user_id": "tdvorak",
+    "outputs": [],
+    "description": "This stream contains the messages from the EXAMPLE production environment.",
+    "created_at": "2017-08-09T10:20:51.559Z",
+    "rules": [
+      {
+        "field": "source",
+        "stream_id": "598ae2032ab79c000141ef2c",
+        "description": "",
+        "id": "598ae2262ab79c000141ef53",
+        "type": 1,
+        "inverted": false,
+        "value": "www.example.com"
+      }
+    ],
+    "alert_conditions": [
+      {
+        "creator_user_id": "admin",
+        "created_at": "2017-11-21T11:42:25.258Z",
+        "id": "5bfcddf4-202b-46d0-8721-18bbd0eeab3e",
+        "type": "field_content_value",
+        "title": "Log level is error",
+        "parameters": {
+          "grace": 10,
+          "backlog": 10,
+          "repeat_notifications": false,
+          "field": "level",
+          "value": "3"
+        }
+      }
+    ],
+    "title": "www.example.com",
+    "content_pack": null,
+    "is_default_stream": false,
+    "index_set_id": "58b6e82c08813b0001acc92e",
+    "matching_type": "AND",
+    "remove_matches_from_default_stream": false,
+    "disabled": false,
+    "id": "598ae2032ab79c000141ef2c"
+  }
+}
+
