@@ -1,0 +1,114 @@
+{
+  "check_result": {
+    "result_description": "Stream received messages matching <level:\"3\"> (Current grace time: 10 minutes)",
+    "triggered_condition": {
+      "id": "3b62d69d-98ef-4bce-91df-b10398bebd66",
+      "type": "field_content_value",
+      "created_at": "2017-11-23T09:26:39.820Z",
+      "creator_user_id": "admin",
+      "title": "Errors on www.example.com",
+      "parameters": {
+        "grace": 10,
+        "backlog": 10,
+        "repeat_notifications": false,
+        "field": "level",
+        "value": "3"
+      }
+    },
+    "triggered_at": "2017-11-24T09:00:37.878Z",
+    "triggered": true,
+    "matching_messages": [
+      {
+        "index": "graylog_7",
+        "message": "java.lang.NullPointerException\nURL: http://www.example.com",
+        "timestamp": "2017-11-24T08:59:49.053Z",
+        "fields": {
+          "file": "GlobalDefaultExceptionHandler.java",
+          "level": 3,
+          "full_message": "java.lang.NullPointerException\nURL: http://www.example.com",
+          "line": 56,
+          "gl2_remote_ip": "127.0.0.172",
+          "logger": "root",
+          "gl2_remote_port": 58209,
+          "gl2_source_node": "f5170a3c-79d2-4349-a738-613f50fe2ae8",
+          "thread": "qtp62262743-45",
+          "gl2_source_input": "58bd29dbe64ada0001086c42",
+          "facility": "gelf-java",
+          "timestampMs": "1511513989053"
+        },
+        "id": "d369a310-d0f5-11e7-84b1-0242ac120004",
+        "source": "www.example.com",
+        "stream_ids": [
+          "598ae2472ab79c000141ef7c",
+          "000000000000000000000001"
+        ]
+      },
+      {
+        "index": "graylog_7",
+        "message": "java.lang.NullPointerException\nURL: http://www.example.com",
+        "timestamp": "2017-11-24T08:59:47.528Z",
+        "fields": {
+          "file": "GlobalDefaultExceptionHandler.java",
+          "level": 3,
+          "full_message": "java.lang.NullPointerException\nURL: http://www.example.com",
+          "line": 56,
+          "gl2_remote_ip": "127.0.0.172",
+          "logger": "root",
+          "gl2_remote_port": 58209,
+          "gl2_source_node": "f5170a3c-79d2-4349-a738-613f50fe2ae8",
+          "thread": "qtp62262743-54",
+          "gl2_source_input": "58bd29dbe64ada0001086c42",
+          "facility": "gelf-java",
+          "timestampMs": "1511513987528"
+        },
+        "id": "d28117d1-d0f5-11e7-84b1-0242ac120004",
+        "source": "www.example.com",
+        "stream_ids": [
+          "598ae2472ab79c000141ef7c",
+          "000000000000000000000001"
+        ]
+      }
+    ]
+  },
+  "stream": {
+    "creator_user_id": "tdvorak",
+    "outputs": [],
+    "description": "This stream contains the messages from the example www environment.",
+    "created_at": "2017-08-09T10:21:59.442Z",
+    "rules": [
+      {
+        "field": "source",
+        "stream_id": "598ae2472ab79c000141ef7c",
+        "description": "",
+        "id": "598ae2572ab79c000141ef8e",
+        "type": 1,
+        "inverted": false,
+        "value": "www.example.com"
+      }
+    ],
+    "alert_conditions": [
+      {
+        "creator_user_id": "admin",
+        "created_at": "2017-11-23T09:26:39.820Z",
+        "id": "3b62d69d-98ef-4bce-91df-b10398bebd66",
+        "type": "field_content_value",
+        "title": "Errors on www.example.com",
+        "parameters": {
+          "grace": 10,
+          "backlog": 10,
+          "repeat_notifications": false,
+          "field": "level",
+          "value": "3"
+        }
+      }
+    ],
+    "title": "www.example.com",
+    "content_pack": null,
+    "is_default_stream": false,
+    "index_set_id": "58b6e82c08813b0001acc92e",
+    "matching_type": "AND",
+    "remove_matches_from_default_stream": false,
+    "disabled": false,
+    "id": "598ae2472ab79c000141ef7c"
+  }
+}

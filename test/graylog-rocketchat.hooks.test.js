@@ -25,3 +25,16 @@ test('Handles error alert', () => {
     ];
     expect(response.content.text.split('\n')).toEqual(expected);
 });
+
+test('Aggregates same messages in error', () => {
+    const response = new Script().process_incoming_request(getRequest('multimessage-alert.json'));
+    const expected = [
+        'java.lang.NullPointerException',
+        'URL: http://www.example.com',
+        '[Display complete message](https://graylog.example.com/messages/graylog_7/d369a310-d0f5-11e7-84b1-0242ac120004), [#2](https://graylog.example.com/messages/graylog_7/d28117d1-d0f5-11e7-84b1-0242ac120004)'
+    ];
+
+    console.log(response.content.text);
+
+    expect(response.content.text.split('\n')).toEqual(expected);
+});
