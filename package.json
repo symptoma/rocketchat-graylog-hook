@@ -24,9 +24,9 @@
   },
   "homepage": "https://github.com/todvora/rocketchat-graylog-hook#readme",
   "devDependencies": {
-    "jest": "^21.2.1"
+    "jest": "^22.4.3"
   },
   "dependencies": {
-    "require-from-string": "^2.0.1"
+    "require-from-string": "^2.0.2"
   }
 }
